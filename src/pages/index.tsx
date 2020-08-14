@@ -1,31 +1,33 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
 import fechApiData from '../helpers/get-data';
+import Search from '../components/searchform/searchform';
 
 const Home = (): JSX.Element => {
 
-	const [api, getApi] = useState(Object);
-
-	useEffect(() => {
-		getData('Batman');
-	}, []);
+	const [api, setApi] = useState(Object);
 
 	const getData = async (term) => {
 		const terms = { searchTerm: term };
-
 		const response = await fechApiData(terms);
 
-		if(response.Search)
-			getApi(response);
+		console.log(response);
+		setApi(response.Search);
 
+	}
+
+	const handleSubmit = (value) => {
+		getData(value);
 	}
 
 	return (
 		<div>
 			<header>
 				<h1>Movie Search</h1>
+				<Search onSubmit={handleSubmit} />
 			</header>
 
-			{api?.Search && api.Search.map((movie, index) => {
+			{api && api.map((movie, index) => {
 				const moviePoster = movie?.Poster === 'N/A' ?
 					'https://via.placeholder.com/300x367' :
 					movie.Poster;
@@ -35,7 +37,7 @@ const Home = (): JSX.Element => {
 					<img src={moviePoster} alt={movie?.Title} />
 				</div>
 			})}
-			
+
 		</div>
 	);
 };

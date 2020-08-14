@@ -1,0 +1,55 @@
+@import '../../sass/responsive.scss';
+
+.seachwrapper{
+  display: flex;
+  width: 400px;
+
+  &__searchinput{
+    width: 70%;
+    padding:  10px;
+  }
+
+  &__searchbtn{
+    background: #008000;
+    color: #FFF;
+    width: 30%;
+    cursor: pointer;
+    transition: ease all 300ms;
+
+    &[disabled]{
+      background: #444;
+      color: #555;
+      cursor: not-allowed;
+    }
+
+    &:hover:not([disabled]){
+      background: #1f4e1f;
+      color: #FFFF66;
+    }
+  }
+
+  &__searchinput, &__searchbtn{
+    height: 40px;
+    font-size: 0.45em;
+
+    @include smartphone-large{
+      height: 35px;
+      font-size: 0.4em;
+    }
+
+    @include smartphone-medium{
+      font-size: 0.6em;
+    }
+
+  }
+
+  @include smartphone-large{
+    width: 300px;
+  }
+
+  @include smartphone-medium{
+    width: 90%;
+  }
+
+}
+

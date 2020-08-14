@@ -8,18 +8,14 @@ interface QueryString {
   searchTerm?: string
 };
 
-const fechApiData = async (terms: QueryString): Promise<Object> => {
+const fechApiData = async (terms: QueryString): Promise<any> => {
 
   const apiURL = `${API_URL}?apikey=${TOKEN}`;
   let queryString = terms.movieName ? `t=${terms.movieName}` : `s=${terms.searchTerm}`
 
   try {
-    const data = await fetch(`${apiURL}&${queryString}`);
-    const response = await data.json();
-
-    if (!data.ok) {
-      return validateError(data);
-    }
+    const data: any = await fetch(`${apiURL}&${queryString}`);
+    const response: any = await data.json();
 
     return response;
 
