@@ -1,6 +1,8 @@
-export default function Home() {
-  return (
-    <div>
-    </div>
-  )
-}
+const Home = (): React.ReactElement => {
+	return (
+		<div>
+		</div>
+	);
+};
+
+export default Home;
