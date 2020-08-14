@@ -1,5 +1,4 @@
 import validateError from './validate-errors';
-import { Interface } from 'readline';
 
 const TOKEN = '7a8619f9';
 const API_URL = 'http://www.omdbapi.com/';
