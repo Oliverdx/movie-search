@@ -5,8 +5,8 @@ const TOKEN = '7a8619f9';
 const API_URL = 'http://www.omdbapi.com/';
 
 interface QueryString {
-  movieName?: string | null,
-  searchTerm?: string | null
+  movieName?: string,
+  searchTerm?: string
 };
 
 const fechApiData = async (terms: QueryString): Promise<Object> => {
