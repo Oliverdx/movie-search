@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import styles from './searchform.module.scss';
+import styles from './search-form.module.scss';
 
 const SearchStandings = ({ onSubmit }): JSX.Element => {
   const [inputValue, setInputValue] = useState('');
@@ -12,9 +12,6 @@ const SearchStandings = ({ onSubmit }): JSX.Element => {
 
   const submitForm = e => {
     e.preventDefault();
-    // let numbersOnly = new RegExp('[0-9]+');
-
-    // if (numbersOnly.test(inputValue))
     onSubmit(inputValue);
   };
 
