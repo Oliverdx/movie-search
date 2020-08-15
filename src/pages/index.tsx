@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 
 import fechApiData from '../helpers/get-data';
-import Search from '../components/searchform/searchform';
+import Search from '../components/search-form/search-form';
+import SearchWrapper from '../components/search-wrapper/search-wrapper';
+
 
 const Home = (): JSX.Element => {
 
-	const [api, setApi] = useState(Object);
+	const [api, setApi] = useState();
 
 	const getData = async (term) => {
 		const terms = { searchTerm: term };
 		const response = await fechApiData(terms);
-
-		console.log(response);
 		setApi(response.Search);
 
 	}
 
 	const handleSubmit = (value) => {
 		getData(value);
+		alert('Esperando a resposta');
 	}
 
 	return (
@@ -27,17 +28,7 @@ const Home = (): JSX.Element => {
 				<Search onSubmit={handleSubmit} />
 			</header>
 
-			{api && api.map((movie, index) => {
-				const moviePoster = movie?.Poster === 'N/A' ?
-					'https://via.placeholder.com/300x367' :
-					movie.Poster;
-
-				return <div key={index}>
-					<h2>{movie?.Title}</h2>
-					<img src={moviePoster} alt={movie?.Title} />
-				</div>
-			})}
-
+			{api && <SearchWrapper searchResults={api} />}
 		</div>
 	);
 };
