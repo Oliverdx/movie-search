@@ -14,10 +14,10 @@ const SearchWrapper = ({ searchResults }): JSX.Element => {
         'https://via.placeholder.com/300x367' :
         movie.Poster;
 
-      return <div key={index}>
+      return <a href={`/${movie?.Type}/${movie?.Title}`} key={index}>
         <h2>{movie?.Title}</h2>
         <img src={moviePoster} alt={movie?.Title} />
-      </div>
+      </a>
     })}
   </div>
 };
