@@ -17,6 +17,9 @@ const fechApiData = async (terms: QueryString): Promise<any> => {
     const data: any = await fetch(`${apiURL}&${queryString}`);
     const response: any = await data.json();
 
+    if (response.Response === 'False')
+      return { message: 'Nenhum conteúdo encontrado' };
+
     return response;
 
   } catch (error) {

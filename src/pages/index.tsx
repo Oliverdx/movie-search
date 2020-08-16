@@ -7,15 +7,19 @@ import Loading from '../components/loading/loading';
 
 const Home = (): JSX.Element => {
 
-	const [api, setApi] = useState();
+	const [api, setApi] = useState(null);
 	const [loading, setLoading] = useState(false);
 
 	const getData = async (term) => {
 		const terms = { searchTerm: term };
 		const response = await fechApiData(terms);
 
+		if (response.message)
+			setApi({ message: response.message });
+		else
+			setApi(response.Search);
+
 		setLoading(false);
-		setApi(response.Search);
 
 	}
 
