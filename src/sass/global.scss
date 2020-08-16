@@ -1,0 +1,45 @@
+@import '../sass/responsive.scss';
+
+html, body{
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #333;
+  font-size: 35px;
+
+  @include tablet{
+    font-size: 30px;
+  }
+
+  @include smartphone-medium{
+    font-size: 28px;
+  }
+
+  @include smartphone-small{
+    font-size: 22px;
+  }
+
+}
+
+body{
+  position: relative;
+}
+
+*{
+  box-sizing: border-box;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+input,
+*:active,
+*:hover,
+*:focus{
+  outline: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
