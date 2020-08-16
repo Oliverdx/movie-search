@@ -2,7 +2,7 @@ import React from 'react';
 import { AppProps } from 'next/app';
 
 //Global SCSS
-import '../styles/globals.css';
+import '../sass/global.scss';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const App = ({ Component, pageProps }: AppProps): React.ReactElement => {

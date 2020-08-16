@@ -1,41 +1,42 @@
-import React, {useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
 import fechApiData from '../helpers/get-data';
+import Search from '../components/search-form/search-form';
+import SearchWrapper from '../components/search-wrapper/search-wrapper';
+import Loading from '../components/loading/loading';
 
 const Home = (): JSX.Element => {
 
-	const [api, getApi] = useState(Object);
-
-	useEffect(() => {
-		getData('Batman');
-	}, []);
+	const [api, setApi] = useState(null);
+	const [loading, setLoading] = useState(false);
 
 	const getData = async (term) => {
 		const terms = { searchTerm: term };
-
 		const response = await fechApiData(terms);
 
-		if(response.Search)
-			getApi(response);
+		if (response.message)
+			setApi({ message: response.message });
+		else
+			setApi(response.Search);
 
+		setLoading(false);
+
+	}
+
+	const handleSubmit = (value) => {
+		setLoading(true);
+		getData(value);
 	}
 
 	return (
 		<div>
 			<header>
 				<h1>Movie Search</h1>
+				<Search onSubmit={handleSubmit} />
 			</header>
 
-			{api?.Search && api.Search.map((movie, index) => {
-				const moviePoster = movie?.Poster === 'N/A' ?
-					'https://via.placeholder.com/300x367' :
-					movie.Poster;
-
-				return <div key={index}>
-					<h2>{movie?.Title}</h2>
-					<img src={moviePoster} alt={movie?.Title} />
-				</div>
-			})}
-			
+			{api && <SearchWrapper searchResults={api} />}
+			{loading && <Loading />}
 		</div>
 	);
 };
