@@ -2,8 +2,6 @@ import React from 'react';
 
 const SearchWrapper = ({ searchResults }): JSX.Element => {
 
-  console.log(searchResults);
-
   if (searchResults.message) {
     return <div><h2>{searchResults.message}</h2></div>
   }
