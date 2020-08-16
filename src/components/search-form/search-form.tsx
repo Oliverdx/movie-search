@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './search-form.module.scss';
 
@@ -22,6 +22,7 @@ const SearchStandings = ({ onSubmit }): JSX.Element => {
         placeholder="Digite o nome de um filme"
         onChange={handleChange}
         className={styles.seachwrapper__searchinput}
+        defaultValue=""
       />
 
       <button id="search_form__btn"
