@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head'
 
 import fechApiData from '../helpers/get-data';
 import Search from '../components/search-form/search-form';
@@ -30,6 +31,10 @@ const Home = (): JSX.Element => {
 
 	return (
 		<div>
+			<Head>
+				<link rel="shortcut icon" href="favicon.ico"></link>
+				<title>O Cinéfilo - Buscador de séries e filmes</title>
+			</Head>
 			<header>
 				<h1>Movie Search</h1>
 				<Search onSubmit={handleSubmit} />
