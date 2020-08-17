@@ -1,0 +1,40 @@
+.internalpage {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: 100vh;
+
+  &_info{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    grid-area: info;
+    padding: 0 30px;
+
+    .top_info{
+      
+    }
+
+    .info_title{
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .info_year{
+      font-size: .6em;
+      margin: 0;
+    }
+
+  }
+
+  &_poster{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: poster;
+
+    .poster_image{
+      width: auto;
+      height: 80%;
+    }
+  }
+}

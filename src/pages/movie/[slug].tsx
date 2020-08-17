@@ -7,15 +7,17 @@ import styles from './[slug].module.scss';
 const Movie = ({ data }): JSX.Element => {
 
   return (
-    <div className={styles.moviepage}>
-      <div className={styles.moviepage_info}>
-        <h1 className={styles.info_title}>{data.Title}</h1>
-        <p className={styles.info_year}>{data?.Year}</p>
-        <Scores scoreData={data} />
+    <div className={styles.internalpage}>
+      <div className={styles.internalpage_info}>
+        <div className={styles.top_info}>
+          <h1 className={styles.info_title}>{data.Title}</h1>
+          <p className={styles.info_year}>{data?.Year}</p>
+          <Scores scoreData={data} />
+        </div>
         <Info infoData={data} />
       </div>
-      <div className={styles.moviepage_poster}>
-        <img src={data?.Poster} alt={data.Title} />
+      <div className={styles.internalpage_poster}>
+        <img className={styles.poster_image} src={data?.Poster} alt={data.Title} />
       </div>
     </div >);
 }
