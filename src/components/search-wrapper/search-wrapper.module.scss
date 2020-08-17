@@ -10,18 +10,17 @@
 }
 
 .search_wrapper{
-  display:grid;
-  grid-template-columns: repeat(5, 17%);
-  grid-gap: 30px 3%;
+  display: flex;
   justify-content: center;
-  width: calc(100% - 30px);
-  margin-bottom: 30px;
-  overflow-x: hidden;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto 30px;
 }
 
 .search_item{
   position: relative;
-  height: 300px;
+  height: auto;
+  margin: 0 20px 20px 20px;
   overflow:hidden;
 
   &:hover{
@@ -37,8 +36,8 @@
 .item{
   
   &_image{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 350px;
   }
 
   &_info{
