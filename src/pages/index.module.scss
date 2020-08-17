@@ -1,18 +1,22 @@
 .initial_layout{
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .show_search {
   flex-direction: column;
-  overflow: scroll;
   margin: 0;
   padding: 0;
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
 
   .site_header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     margin: 20px 0;
 
     .logo{
@@ -24,8 +28,6 @@
 
 .initial_layout,
 .show_search{
-  width: 100vw;
-  height: 100vh;
   display: flex;
 }
 
