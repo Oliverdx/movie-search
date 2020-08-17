@@ -5,7 +5,9 @@ import styles from './search-wrapper.module.scss';
 const SearchWrapper = ({ searchResults }): JSX.Element => {
 
   if (searchResults.message) {
-    return <div><h2>{searchResults.message}</h2></div>
+    return <div className={styles.search_notfound}>
+      <h2 className={styles.message}>{searchResults.message}</h2>
+    </div>
   }
 
   return <div className={styles.search_wrapper}>
