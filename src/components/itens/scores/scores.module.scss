@@ -1,0 +1,45 @@
+.info_scores{
+  display: flex;
+  padding: 10px 0 0;
+
+  &__imdb, &__rotten{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+    margin-right: 15px;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+  }
+
+  &__imdb{
+    .logo{
+      background-image: url('/img/imdb.svg');
+      background-color: #F6C700;
+    }
+  }
+
+  &__rotten{
+    .logo{
+      background-image: url('/img/rotten.svg');
+      background-color: #F93208;
+    }
+  }
+
+  .logo{
+    display:block;
+    width: 60px;
+    height: 38px;
+    border-radius: 4px 0 0 4px;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .score{
+    width: 60px;
+    text-align: center;
+    font-size: .45em;
+    margin: 0;
+  }
+}
