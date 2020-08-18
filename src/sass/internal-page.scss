@@ -11,10 +11,13 @@
     margin: 0 auto;
   }
 
+  .title{
+    font-size: 1.5em;
+  }
+
   .info, .poster{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 80%;
   }
 
@@ -22,6 +25,7 @@
     &_top{
       display: flex;
       flex-direction: column;
+      margin-bottom: 30px;
 
       .year{
         margin: 0;
