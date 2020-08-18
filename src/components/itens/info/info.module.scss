@@ -1,29 +1,7 @@
-.info_desc{
-  display: grid;
-  grid-template-areas: 'plot plot plot' 'cast genre director';
-  grid-template-columns: repeat(3, 33.333%);
-  grid-gap: 15px 10px;
-
-  &__plot{
-    grid-area: plot;
-  }
-
-  &__cast{
-    grid-area:cast ;
-  }
-
-  &__genre{
-    grid-area: genre;
-  }
-
-  &__director{
-    grid-area: director;
-  }
-
-  h2{
+  .section_title{
     font-size: .5em;
   }
-  p{
+  
+  .section_text{
     font-size: .4em;
   }
-}
