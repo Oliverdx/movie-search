@@ -59,6 +59,19 @@
   }
 }
 
+@include smartphone-medium {
+  .show_search {
+    .site_header{
+      flex-direction: column;
+    }
+    
+    .logo{
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
 @include smartphone-small {
   .logo{
     width: 350px;
