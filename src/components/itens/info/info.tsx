@@ -3,21 +3,17 @@ import styles from './info.module.scss';
 const Info = ({ infoData }) => {
   return (
     <div className={styles.info_desc}>
-      <div className={styles.info_desc__plot}>
-        <h2 className={styles.title_desc}>Plot</h2>
-        <p>{infoData?.Plot}</p>
+      <div className={styles.cast}>
+        <h2 className={styles.section_title}>Cast</h2>
+        <p className={styles.section_text}>{infoData?.Actors}</p>
       </div>
-      <div className={styles.info_desc__cast}>
-        <h2 className={styles.title_desc}>Cast</h2>
-        <p>{infoData?.Actors}</p>
+      <div className={styles.genre}>
+        <h2 className={styles.section_title}>Genre</h2>
+        <p className={styles.section_text}>{infoData?.Genre}</p>
       </div>
-      <div className={styles.info_desc__genre}>
-        <h2 className={styles.title_desc}>Genre</h2>
-        <p>{infoData?.Genre}</p>
-      </div>
-      <div className={styles.info_desc__director}>
-        <h2 className={styles.title_desc}>Director</h2>
-        <p>{infoData?.Director}</p>
+      <div className={styles.director}>
+        <h2 className={styles.section_title}>Director</h2>
+        <p className={styles.section_text}>{infoData?.Director}</p>
       </div>
     </div>
   )

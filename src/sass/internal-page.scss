@@ -1,40 +1,48 @@
 .internalpage {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  height: 100vh;
+  background: no-repeat center center / cover;
 
-  &_info{
+  .wrapper{
+    display: grid;
+    grid-template-columns: auto 300px;
+    gap: 20px;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+  }
+
+  .info, .poster{
     display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    grid-area: info;
-    padding: 0 30px;
+    justify-content: space-between;
+    height: 80%;
+  }
 
-    .top_info{
-      
+  .info{
+    &_top{
+      display: flex;
+      flex-direction: column;
+
+      .year{
+        margin: 0;
+      }
     }
+  }
 
-    .info_title{
-      font-size: 1.5em;
-      margin-bottom: 15px;
-    }
-
-    .info_year{
-      font-size: .6em;
-      margin: 0;
+  .poster {
+    &_image{
+      width: 260px;
+      height: auto;
+      margin-bottom: 20px;
     }
 
   }
 
-  &_poster{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-area: poster;
-
-    .poster_image{
-      width: auto;
-      height: 80%;
-    }
+  .section_title{
+    font-size: .5em;
+  }
+  
+  .section_text{
+    font-size: .4em;
   }
 }
