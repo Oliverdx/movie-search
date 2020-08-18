@@ -1,0 +1,44 @@
+.initial_layout{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.show_search {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  overflow-x: hidden;
+
+  .site_header{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+
+    .logo{
+      width: 400px;
+      margin: 0;
+    }
+  }
+}
+
+.initial_layout,
+.show_search{
+  display: flex;
+}
+
+.site_header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo{
+    width: 500px;
+    margin-bottom: 15px;
+  }
+}

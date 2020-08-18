@@ -3,10 +3,9 @@
 html, body{
   padding: 0;
   margin: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #333;
+  background: #000528;
   font-size: 35px;
+  color: #FFF;
 
   @include tablet{
     font-size: 30px;
@@ -39,6 +38,21 @@ input,
 *:hover,
 *:focus{
   outline: none;
+}
+
+.font-zero{
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 
