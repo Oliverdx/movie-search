@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 
 import fechApiData from '../helpers/get-data';
@@ -12,6 +12,13 @@ const Home = (): JSX.Element => {
 
 	const [api, setApi] = useState(null);
 	const [loading, setLoading] = useState(false);
+	let search = typeof window !== 'undefined' ? document?.location?.search : '';
+
+	useEffect(() => {
+		if (search)
+			getData(search);
+
+	}, [search]);
 
 	const getData = async (term) => {
 		const terms = { searchTerm: term };
@@ -28,6 +35,7 @@ const Home = (): JSX.Element => {
 
 	const handleSubmit = (value) => {
 		setLoading(true);
+		document.location.search = value;
 		getData(value);
 	}
 
