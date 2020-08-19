@@ -1,3 +1,5 @@
+@import '../../sass/responsive.scss';
+
 .search_notfound{
   display: flex;
   justify-content: center;
@@ -85,4 +87,34 @@
       margin: 5px 0 0;
     }
   }
+}
+
+@include tablet{
+  .search_wrapper{
+    width: 95%;
+  }
+
+  .search_item{
+    width: calc(25% - 30px); 
+    margin: 0 15px 15px 15px;
+  }
+
+  .item{
+    &_image{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@include smartphone-medium{
+   .search_item{
+      width: calc(33.333% - 30px);
+   }
+}
+
+@include smartphone-medium{
+   .search_item{
+      width: calc(50% - 30px);
+   }
 }
