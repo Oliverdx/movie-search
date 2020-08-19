@@ -20,6 +20,7 @@ const Movie = ({ data }): JSX.Element => {
             <h1 className={styles.title}>{data.Title}</h1>
             <p className={styles.year}>{data?.Year}</p>
             <Scores scoreData={data} />
+            <img className={styles.poster_image_mobile} src={data?.Poster} alt={data.Title} />
           </div>
           <div className={styles.plot}>
             <h2 className={styles.section_title}>Plot</h2>
