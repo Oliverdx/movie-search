@@ -1,7 +1,7 @@
 import validateError from './validate-errors';
 
 const TOKEN = '7a8619f9';
-const API_URL = 'http://www.omdbapi.com/';
+const API_URL = '//www.omdbapi.com/';
 
 interface QueryString {
   movieName?: string,
