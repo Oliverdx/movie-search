@@ -1,0 +1,21 @@
+.arrowBack{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+  border-radius: 100%;
+  margin-bottom: 15px;
+  transition: ease all 300ms;
+  cursor: pointer;
+
+  &:hover{
+    background: #555;
+  }
+
+  img{
+    width: 50%;
+    height: auto
+  }
+}
