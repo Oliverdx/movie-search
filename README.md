@@ -1,30 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6824dd6-b627-481f-b4f5-cd1996764a3d/deploy-status)](https://app.netlify.com/sites/festive-benz-033a02/deploys)
 
-## Getting Started
+# O Cinéfilo
 
-First, run the development server:
+App para exibição de dados sobre filmes e séries baseado na [OMDb API](http://www.omdbapi.com/)
 
-```bash
+## Contruido com
+
+Feito com [Node](https://nodejs.org/en/download/), para rodar certifique que possui instalado em sua máquina
+para fazer esse projeto foi usada a versão 10.16.3.
+
+### Outras tecnologias
+* [NextJS](http://nextjs.org/)
+* [Babel](https://babeljs.io/)
+* [React](https://reactjs.org/)
+* [Sass](https://sass-lang.com/)
+* [Typescript](https://www.typescriptlang.org/)
+
+## Install Instructions
+
+No terminal, navegue até a pasta do projeto fazendo a instalação das dependencias usando o comando
+
+```
+npm install
+```
+Após todas as dependências instaladas rodar o comando para abrir em modo de desenvolvimento
+
+```
 npm run dev
-# or
-yarn dev
+```
+Após esse comando abrir no navegador o [localhost](https://localhost:3000) na porta 3000 para se ter
+visualização do projeto
+
+## Production
+Para rodar a build de produção é necessário usar o comando
+```
+npm build
+```
+Será gerada uma pasta .next onde está estará com os arquivos necessários para fazer o projeto
+rodar de uma forma mais veloz e pronta para produção, sendo necessário rodar o comando de start
+para poder se visualizar no navegador
+
+```
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Aprimoramentos para o futuro
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [ ] Persistência favoritos
+- [ ] Adição de botão de favoritos na página interna do filme/série
+- [ ] Melhor disposição da página principal quando se faz uma busca
+- [ ] Acrescentar dado de classificação na página interna
+- [ ]
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Author
+Feito por [Vanderlei Oliveira](https://oliverdx.com.br)
