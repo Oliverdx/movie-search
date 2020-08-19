@@ -2,10 +2,12 @@
 
 .section_title{
   font-size: .5em;
+  color: #999;
 }
 
 .section_text{
   font-size: .4em;
+  margin: 10px 0 25px;
 }
 
 @include smartphone-small{
