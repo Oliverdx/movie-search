@@ -50,7 +50,6 @@ npm start
 - [ ] Adição de botão de favoritos na página interna do filme/série
 - [ ] Melhor disposição da página principal quando se faz uma busca
 - [ ] Acrescentar dado de classificação na página interna
-- [ ]
 
 ## Author
 Feito por [Vanderlei Oliveira](https://oliverdx.com.br)
