@@ -1,84 +1,52 @@
-@import './responsive.scss';
-@import '../components/itens/info/info.module.scss';
-
-.poster_image_mobile{
-  display:none;
-}
-
 .internalpage {
   background: no-repeat center center / cover;
-}
-
-.wrapper{
-  display: grid;
-  grid-template-columns: auto 300px;
-  gap: 20px;
-  align-items: center;
-  width: 80%;
-  height: 100vh;
-  margin: 0 auto;
-}
-
-.title{
-  font-size: 1.5em;
-}
-
-.info, .poster{
-  display: flex;
-  flex-direction: column;
-  height: 80%;
-}
-
-.info{
-  &_top{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-
-    .year{
-      margin: 0;
-    }
-  }
-}
-
-.poster {
-  &_image{
-    width: 260px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-}
-
-@include smartphone-large {
-  .title{
-    font-size: 1em;
-  }
-
-}
-
-@include smartphone-medium{
-
-  .info, .poster{
-    height: auto;
-  }
-
-  .poster_image_mobile{
-    display:block;
-    width: 250px;
-    margin: 30px auto 0;
-  }
-
-  .poster_image{
-    display: none;
-  }
 
   .wrapper{
-    display: block;
-    height: auto;
-    padding: 30px 0;
+    display: grid;
+    grid-template-columns: auto 300px;
+    gap: 20px;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
   }
 
-  .poster{
-    width: 100%;
+  .title{
+    font-size: 1.5em;
+  }
+
+  .info, .poster{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+  }
+
+  .info{
+    &_top{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      .year{
+        margin: 0;
+      }
+    }
+  }
+
+  .poster {
+    &_image{
+      width: 260px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .section_title{
+    font-size: .5em;
+  }
+  
+  .section_text{
+    font-size: .4em;
   }
 }
