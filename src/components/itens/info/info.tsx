@@ -1,6 +1,6 @@
 import styles from './info.module.scss';
 
-const Info = ({ infoData }) => {
+const Info = ({ infoData }): JSX.Element => {
   return (
     <div className={styles.info_desc}>
       <div className={styles.cast}>

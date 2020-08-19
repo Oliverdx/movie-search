@@ -1,52 +1,57 @@
+@import './responsive.scss';
+@import '../components/itens/info/info.module.scss';
+
 .internalpage {
   background: no-repeat center center / cover;
+}
 
-  .wrapper{
-    display: grid;
-    grid-template-columns: auto 300px;
-    gap: 20px;
-    align-items: center;
-    width: 80%;
-    height: 100vh;
-    margin: 0 auto;
-  }
+.wrapper{
+  display: grid;
+  grid-template-columns: auto 300px;
+  gap: 20px;
+  align-items: flex-start;
+  width: 80%;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: 30px;
+}
 
-  .title{
-    font-size: 1.5em;
+.poster{
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+
+  &_image{
+    width: 260px;
+    height: auto;
+    margin-bottom: 20px;
   }
+}
+
+
+@include smartphone-medium{
 
   .info, .poster{
-    display: flex;
-    flex-direction: column;
-    height: 80%;
+    height: auto;
   }
 
-  .info{
-    &_top{
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 30px;
-
-      .year{
-        margin: 0;
-      }
-    }
+  .poster_image_mobile{
+    display:block;
+    width: 250px;
+    margin: 30px auto 0;
   }
 
-  .poster {
-    &_image{
-      width: 260px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
+  .poster_image{
+    display: none;
   }
 
-  .section_title{
-    font-size: .5em;
+  .wrapper{
+    display: block;
+    height: auto;
+    padding: 30px 0;
   }
-  
-  .section_text{
-    font-size: .4em;
+
+  .poster{
+    width: 100%;
   }
 }
