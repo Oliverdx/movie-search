@@ -1,0 +1,44 @@
+@import '../../sass/responsive.scss';
+
+.poster_image_mobile{
+  display:none;
+}
+
+.title{
+  font-size: 1.5em;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+
+  &_top{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .year, .duration{
+      margin: 5px 0 10px;
+      font-size: .5em;
+    }
+  }
+}
+
+@include smartphone-large {
+  .title{
+    font-size: 1em;
+  }
+}
+
+@include smartphone-medium{
+  .info{
+    height: auto;
+  }
+
+  .poster_image_mobile{
+    display:block;
+    width: 250px;
+    margin: 30px auto 0;
+  }
+
+}
