@@ -13,7 +13,7 @@ const SearchWrapper = ({ searchResults }): JSX.Element => {
   return <div className={styles.search_wrapper}>
     {searchResults && searchResults.map((movie, index) => {
       const moviePoster = movie?.Poster === 'N/A' ?
-        'https://via.placeholder.com/300x367' :
+        '/img/not_found.jpg' :
         movie.Poster;
 
       return <a href={`/${movie?.Type}/${movie?.Title}`} key={index} className={styles.search_item}>
