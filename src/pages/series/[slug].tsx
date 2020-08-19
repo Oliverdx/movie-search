@@ -8,6 +8,8 @@ import styles from './[slug].module.scss';
 
 const Series = ({ data }): JSX.Element => {
 
+  const posterImage = data?.Poster === 'N/A' ? '/img/not_found.jpg' : data?.Poster;
+
   return (
     <div className={styles.internalpage} style={{ backgroundImage: 'url(/img/movie-bg.png)' }}>
       <Head>
@@ -23,7 +25,7 @@ const Series = ({ data }): JSX.Element => {
           </div>
         </div>
         <div className={styles.poster}>
-          <img className={styles.poster_image} src={data?.Poster} alt={data.Title} />
+          <img className={styles.poster_image} src={posterImage} alt={data.Title} />
           <Info infoData={data} />
         </div>
       </div>
